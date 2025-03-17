@@ -7,13 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         #fixed-image {
-            position: fixed;
-            top: 50%;
-            left: 20%;
-            transform: translate(0, -50%);
             transition: opacity 0.5s;
-            width: 300px; /* Ajusta el tamaño de la imagen según tus necesidades */
-            height: auto;
         }
     </style>
 </head>
@@ -41,7 +35,7 @@
     <main class="flex-grow">
         <section class="p-4 bg-transparent flex items-center">
             <div class="w-1/3">
-                <img id="fixed-image" src="/IMG/erebusTheLostShadowTitleText.png" alt="Game Title: Erebus The Lost Shadow">
+                <img id="fixed-image" src="/IMG/erebusTheLostShadowTitleText.png" alt="Game Title: Erebus The Lost Shadow" class="fixed top-1/2 left-0 transform -translate-y-1/2 w-72 h-auto">
             </div>
             <div class="w-2/3 p-4">
                 <!-- Espacio vacío para apreciar el arte de la imagen de fondo -->
