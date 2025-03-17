@@ -8,7 +8,7 @@ window.addEventListener('scroll', function() {
 
     // Parallax effect for game-title-text
     const fixedImage = document.getElementById('game-title-text');
-    fixedImage.style.transform = `translateY(${scrollPosition * 0.3}px) translateX(-50%)`;
+    fixedImage.style.transform = `translateY(${scrollPosition * 0.5}px)`;
 
     // Show/hide game-title-text based on scroll position
     if (scrollPosition > windowHeight) {
