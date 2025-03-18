@@ -6,14 +6,27 @@ window.addEventListener('scroll', function() {
     const parallaxBg = document.querySelector('.parallax-bg');
     parallaxBg.style.backgroundPositionY = `${-scrollPosition * 0.5}px`;
 
+    // Adjust the scroll speed here (e.g., 0.2 for slower, 0.8 for faster)
+    const scrollSpeed = 0.3;
+
     // Inverted parallax effect for game-title-text
     const fixedImage = document.getElementById('game-title-text');
-    fixedImage.style.transform = `translateY(${-scrollPosition * 0.5}px)`;
+    fixedImage.style.transform = `translateY(${-scrollPosition * scrollSpeed}px)`;
 
-    // Show/hide game-title-text based on scroll position
-    if (scrollPosition > windowHeight) {
-        fixedImage.style.opacity = '0';
+    // Adjust the opacity based on scroll position
+    const fadeThreshold = windowHeight / 2; // Adjust this value as needed
+
+    if (scrollPosition > fadeThreshold) {
+        // Fade out
+        fixedImage.style.opacity = 1 - (scrollPosition - fadeThreshold) / fadeThreshold;
+        if (fixedImage.style.opacity < 0) {
+            fixedImage.style.opacity = 0;
+        }
     } else {
-        fixedImage.style.opacity = '1';
+        // Appear by default and fade out as scrolling down
+        fixedImage.style.opacity = 1 - (scrollPosition / fadeThreshold);
+        if (fixedImage.style.opacity < 0) {
+            fixedImage.style.opacity = 0;
+        }
     }
 });
