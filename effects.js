@@ -30,3 +30,12 @@ window.addEventListener('scroll', function() {
         }
     }
 });
+
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+const logo = document.querySelector('.absolute.left-1\\/2.transform.-translate-x-1\\/2'); // Select the logo
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    logo.classList.toggle('hidden'); // Toggle the logo's visibility
+});
