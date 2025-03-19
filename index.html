@@ -13,11 +13,20 @@
 
     <div class="content-wrapper">
         <header class="p-16 flex justify-between items-center relative" style="background-color: rgba(0, 0, 0, 0.75);">
-            <nav class="flex space-x-4">
-                <a href="about.html" class="text-white">About</a>
-                <a href="games.html" class="text-white">Games</a>
-                <a href="ranking.html" class="text-white">Ranking</a>
-                <a href="contact.html" class="text-white">Contact</a>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <nav id="menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                <a href="about.html" class="text-white block py-2 px-4 hover:bg-gray-700">About</a>
+                <a href="games.html" class="text-white block py-2 px-4 hover:bg-gray-700">Games</a>
+                <a href="ranking.html" class="text-white block py-2 px-4 hover:bg-gray-700">Ranking</a>
+                <a href="contact.html" class="text-white block py-2 px-4 hover:bg-gray-700">Contact</a>
             </nav>
 
             <div class="flex-grow text-center flex flex-col items-center m-0 absolute left-1/2 transform -translate-x-1/2 ">
@@ -52,7 +61,7 @@
                     </nav>
                     <div class="flex-grow text-center flex flex-col items-center m-0 absolute left-1/2 transform -translate-x-1/2">
                         <img src="/IMG/logoVerticalWhite.png" alt="Dejavu Game Studio Logo" class="md:h-40 h-20 m-0">
-                        <p class="text-center text-white mt-2">&copy; 2025 Dejavu Game Studio. All rights reserved.</p>
+                        <p class="text-center text-white">&copy; 2025 Dejavu Game Studio. All rights reserved.</p>
                     </div>
                     <div class="flex space-x-4 m-0">
                         <a href="https://www.youtube.com" target="_blank" class="m-0">
