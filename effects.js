@@ -1,4 +1,4 @@
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
 
@@ -31,11 +31,22 @@ window.addEventListener('scroll', function() {
     }
 });
 
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-const logo = document.querySelector('.absolute.left-1\\/2.transform.-translate-x-1\\/2'); // Select the logo
+// Generic toggle function for menus
+function setupMenuToggle(toggleId, menuId, logoSelector) {
+    const menuToggle = document.getElementById(toggleId);
+    const menu = document.getElementById(menuId);
+    const logo = document.querySelector(logoSelector);
 
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-    logo.classList.toggle('hidden'); // Toggle the logo's visibility
-});
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        if (logo) {
+            logo.classList.toggle('hidden'); // Toggle the logo's visibility if it exists
+        }
+    });
+}
+
+// Setup header menu toggle
+setupMenuToggle('menu-toggle', 'menu', '.absolute.left-1\\/2.transform.-translate-x-1\\/2');
+
+// Setup footer menu toggle
+setupMenuToggle('footer-menu-toggle', 'footer-menu', '.footer-logo'); // Adjust the logo selector if needed
