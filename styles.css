@@ -23,3 +23,22 @@
         main {
             flex-grow: 1;
         }
+
+/* General styles for the footer menu */
+#footer-menu {
+    display: none; /* Default state for small screens */
+}
+
+/* Show the footer menu on larger screens */
+@media (min-width: 769px) {
+    #footer-menu {
+        display: flex; /* Ensure the menu is visible on larger screens */
+    }
+}
+
+/* Ensure the footer logo and other elements are not affected on larger screens */
+@media (min-width: 769px) {
+    .footer-logo {
+        display: block; /* Ensure the logo is always visible on larger screens */
+    }
+}

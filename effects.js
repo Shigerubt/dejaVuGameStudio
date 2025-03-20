@@ -37,10 +37,18 @@ function setupMenuToggle(toggleId, menuId, logoSelector) {
     const menu = document.getElementById(menuId);
     const logo = document.querySelector(logoSelector);
 
+    if (!menuToggle || !menu) {
+        console.error(`Menu toggle or menu not found: toggleId=${toggleId}, menuId=${menuId}`);
+        return;
+    }
+
     menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        if (logo) {
-            logo.classList.toggle('hidden'); // Toggle the logo's visibility if it exists
+        // Ensure this only applies to mobile view
+        if (window.innerWidth <= 768) {
+            menu.classList.toggle('hidden');
+            if (logo) {
+                logo.classList.toggle('hidden'); // Toggle the logo's visibility if it exists
+            }
         }
     });
 }
