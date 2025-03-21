@@ -24,21 +24,39 @@
             flex-grow: 1;
         }
 
-/* General styles for the footer menu */
+/* Footer menu styles */
 #footer-menu {
-    display: none; /* Default state for small screens */
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posición relativa al contenedor */
+    bottom: 100%; /* Expande hacia arriba */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho del footer */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    padding: 1rem; /* Espaciado interno */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    z-index: 10; /* Asegura que esté encima de otros elementos */
+    transition: all 0.3s ease-in-out; /* Transición suave */
 }
 
-/* Show the footer menu on larger screens */
+/* Mostrar el menú cuando no tenga la clase hidden */
+#footer-menu:not(.hidden) {
+    display: flex;
+    flex-direction: column; /* Apilar enlaces verticalmente */
+    gap: 0.5rem; /* Espaciado entre enlaces */
+}
+
+/* Asegurar que el menú y el logo no se vean afectados en pantallas grandes */
 @media (min-width: 769px) {
     #footer-menu {
-        display: flex; /* Ensure the menu is visible on larger screens */
+        display: flex; /* Siempre visible en pantallas grandes */
+        position: static; /* Posición normal */
+        bottom: auto; /* Sin expansión hacia arriba */
+        background-color: transparent; /* Sin fondo */
+        padding: 0; /* Sin espaciado */
+        border-radius: 0; /* Sin bordes redondeados */
     }
-}
 
-/* Ensure the footer logo and other elements are not affected on larger screens */
-@media (min-width: 769px) {
     .footer-logo {
-        display: block; /* Ensure the logo is always visible on larger screens */
+        display: block; /* Siempre visible */
     }
 }

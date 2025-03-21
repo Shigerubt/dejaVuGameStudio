@@ -58,3 +58,16 @@ setupMenuToggle('menu-toggle', 'menu', '.absolute.left-1\\/2.transform.-translat
 
 // Setup footer menu toggle
 setupMenuToggle('footer-menu-toggle', 'footer-menu', '.footer-logo'); // Adjust the logo selector if needed
+
+document.addEventListener('DOMContentLoaded', function () {
+    const footerMenuToggle = document.getElementById('footer-menu-toggle');
+    const footerMenu = document.getElementById('footer-menu');
+    const footerLogo = document.querySelector('.footer-logo');
+
+    if (footerMenuToggle && footerMenu) {
+        footerMenuToggle.addEventListener('click', function () {
+            footerMenu.classList.toggle('hidden'); // Alternar visibilidad del menú
+            footerLogo.classList.toggle('hidden'); // Alternar visibilidad del logo
+        });
+    }
+});
