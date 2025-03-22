@@ -12,6 +12,7 @@
 
     <div class="content-wrapper">
         <header class="p-6 md:p-16 flex justify-between items-center relative" style="background-color: rgba(0, 0, 0, 0.75);">
+            <!-- Hamburger Menu -->
             <div class="md:hidden">
                 <button id="menu-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
                     <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -21,6 +22,7 @@
                 </button>
             </div>
 
+            <!-- Navigation Menu -->
             <nav id="menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
                 <a href="about.html" class="text-white block py-2 px-4 hover:bg-gray-700">About</a>
                 <a href="games.html" class="text-white block py-2 px-4 hover:bg-gray-700">Games</a>
@@ -28,11 +30,13 @@
                 <a href="contact.html" class="text-white block py-2 px-4 hover:bg-gray-700">Contact</a>
             </nav>
 
-            <div class="flex-grow text-center flex flex-col items-center m-0 absolute left-1/2 transform -translate-x-1/2">
-                <img src="/IMG/logoVerticalWhite.png" alt="Dejavu Game Studio Logo" class="mx-auto md:h-40 h-20 m-0">
+            <!-- Logo -->
+            <div class="flex-grow text-center absolute left-1/2 transform -translate-x-1/2">
+                <img src="/IMG/logoVerticalWhite.png" alt="Dejavu Game Studio Logo" class="mx-auto md:h-40 h-20">
             </div>
 
-            <div class="flex space-x-4 md:flex">
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4 ml-auto">
                 <a href="https://www.youtube.com" target="_blank">
                     <img src="/IMG/youTubeWhite.png" alt="YouTube" class="h-6">
                 </a>
@@ -50,7 +54,7 @@
         </main>
 
         <footer class="bg-black text-white p-6 relative">
-            <div class="flex flex-row justify-between items-center md:flex-row">
+            <div class="flex justify-between items-center relative">
                 <!-- Hamburger Menu -->
                 <div class="md:hidden">
                     <button id="footer-menu-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
@@ -61,13 +65,21 @@
                     </button>
                 </div>
 
+                <!-- Navigation Menu -->
+                <nav id="footer-menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                    <a href="about.html" class="text-white block py-2 px-4 hover:bg-gray-700">About</a>
+                    <a href="games.html" class="text-white block py-2 px-4 hover:bg-gray-700">Games</a>
+                    <a href="ranking.html" class="text-white block py-2 px-4 hover:bg-gray-700">Ranking</a>
+                    <a href="contact.html" class="text-white block py-2 px-4 hover:bg-gray-700">Contact</a>
+                </nav>
+
                 <!-- Logo -->
-                <div class="flex-grow text-center flex flex-col items-center m-0 absolute left-1/2 transform -translate-x-1/2">
-                    <img src="/IMG/logoVerticalWhite.png" alt="Dejavu Game Studio Logo" class="mx-auto md:h-40 h-20 m-0">
+                <div class="flex-grow text-center absolute left-1/2 transform -translate-x-1/2">
+                    <img src="/IMG/logoVerticalWhite.png" alt="Dejavu Game Studio Logo" class="mx-auto md:h-40 h-20">
                 </div>
 
                 <!-- Social Media Icons -->
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 ml-auto">
                     <a href="https://www.youtube.com" target="_blank">
                         <img src="/IMG/youTubeWhite.png" alt="YouTube" class="h-6">
                     </a>
@@ -76,14 +88,6 @@
                     </a>
                 </div>
             </div>
-
-            <!-- Navigation Menu -->
-            <nav id="footer-menu" class="hidden flex-col space-y-2 mt-4">
-                <a href="about.html" class="text-white block py-2 px-4 hover:bg-gray-700">About</a>
-                <a href="games.html" class="text-white block py-2 px-4 hover:bg-gray-700">Games</a>
-                <a href="ranking.html" class="text-white block py-2 px-4 hover:bg-gray-700">Ranking</a>
-                <a href="contact.html" class="text-white block py-2 px-4 hover:bg-gray-700">Contact</a>
-            </nav>
 
             <!-- Copyright Row -->
             <div class="text-center mt-4">
