@@ -72,16 +72,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Toggle footer menu visibility
+// Toggle footer menu visibility on small screens
 const footerMenuToggle = document.getElementById('footer-menu-toggle');
 const footerMenu = document.getElementById('footer-menu');
 
 footerMenuToggle.addEventListener('click', () => {
-    if (footerMenu.classList.contains('hidden')) {
-        footerMenu.classList.remove('hidden');
-        footerMenu.classList.add('flex', 'flex-col', 'absolute', 'bottom-full', 'left-0', 'w-full', 'bg-black');
-    } else {
-        footerMenu.classList.add('hidden');
-        footerMenu.classList.remove('flex', 'flex-col', 'absolute', 'bottom-full', 'left-0', 'w-full', 'bg-black');
-    }
+    footerMenu.classList.toggle('hidden');
 });
