@@ -79,3 +79,16 @@ const footerMenu = document.getElementById('footer-menu');
 footerMenuToggle.addEventListener('click', () => {
     footerMenu.classList.toggle('hidden');
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const footerMenuToggle = document.getElementById("footer-menu-toggle");
+    const footerMenu = document.getElementById("footer-menu");
+
+    footerMenuToggle.addEventListener("click", () => {
+        if (footerMenu.style.display === "none" || footerMenu.style.display === "") {
+            footerMenu.style.display = "block";
+        } else {
+            footerMenu.style.display = "none";
+        }
+    });
+});
