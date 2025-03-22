@@ -24,30 +24,18 @@
             flex-grow: 1;
         }
 
-/* Footer menu hidden by default */
+/* Footer menu styles */
 #footer-menu {
-    display: none;
-    position: absolute;
-    bottom: 100%; /* Position above the button */
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posición relativa al contenedor */
+    bottom: 100%; /* Expande hacia arriba */
     left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 10;
-    padding: 1rem;
-    border-top: 1px solid white;
-    animation: slide-up 0.3s ease-out;
-}
-
-/* Slide-up animation */
-@keyframes slide-up {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    width: 100%; /* Ocupa todo el ancho del footer */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    padding: 1rem; /* Espaciado interno */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    z-index: 10; /* Asegura que esté encima de otros elementos */
+    transition: all 0.3s ease-in-out; /* Transición suave */
 }
 
 /* Mostrar el menú cuando no tenga la clase hidden */
