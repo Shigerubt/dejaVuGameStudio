@@ -60,3 +60,11 @@
         display: block; /* Siempre visible */
     }
 }
+
+/* Fade-out effect for game-title-text */
+#game-title-text {
+    transition: opacity 0.5s ease-out;
+}
+.fade-out {
+    opacity: 0;
+}
