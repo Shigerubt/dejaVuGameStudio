@@ -6,15 +6,6 @@
     <title>Dejavu Game Studio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/styles.css">
-    <style>
-        /* Fade-out effect for game-title-text */
-        #game-title-text {
-            transition: opacity 0.5s ease-out;
-        }
-        .fade-out {
-            opacity: 0;
-        }
-    </style>
 </head>
 <body class="bg-black text-white">
     <div class="parallax-bg"></div>
@@ -134,19 +125,5 @@
         </footer>
     </div>
     <script src="/JS/effects.js"></script>
-        <script>
-        // Fade-out effect on scroll
-        window.addEventListener('scroll', () => {
-            const title = document.getElementById('game-title-text');
-            const fadePoint = window.innerHeight / 2; // Adjust fade point as needed
-            const scrollY = window.scrollY;
-
-            if (scrollY > fadePoint) {
-                title.classList.add('fade-out');
-            } else {
-                title.classList.remove('fade-out');
-            }
-        });
-    </script>
 </body>
 </html>
