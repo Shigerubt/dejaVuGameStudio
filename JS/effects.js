@@ -31,19 +31,6 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Fade-out effect on scroll
-window.addEventListener('scroll', () => {
-    const title = document.getElementById('game-title-text');
-    const fadePoint = window.innerHeight / 2; // Adjust fade point as needed
-    const scrollY = window.scrollY;
-
-    if (scrollY > fadePoint) {
-        title.classList.add('fade-out');
-    } else {
-        title.classList.remove('fade-out');
-    }
-});
-
 // Generic toggle function for menus
 function setupMenuToggle(toggleId, menuId, logoSelector) {
     const menuToggle = document.getElementById(toggleId);
@@ -91,4 +78,17 @@ const footerMenu = document.getElementById('footer-menu');
 
 footerMenuToggle.addEventListener('click', () => {
     footerMenu.classList.toggle('hidden');
+});
+
+// Fade-out effect on scroll
+window.addEventListener('scroll', () => {
+    const title = document.getElementById('game-title-text');
+    const fadePoint = window.innerHeight / 2; // Adjust fade point as needed
+    const scrollY = window.scrollY;
+
+    if (scrollY > fadePoint) {
+        title.classList.add('fade-out');
+    } else {
+        title.classList.remove('fade-out');
+    }
 });
