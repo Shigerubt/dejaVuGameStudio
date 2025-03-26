@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dejavu Game Studio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
     <style>
         /* Fade-out effect for game-title-text */
         #game-title-text {
@@ -33,15 +33,15 @@
 
             <!-- Navigation Menu -->
             <nav id="menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-                <a href="about.html" class="text-white block py-2 px-4 hover:bg-gray-700">About</a>
-                <a href="games.html" class="text-white block py-2 px-4 hover:bg-gray-700">Games</a>
-                <a href="ranking.html" class="text-white block py-2 px-4 hover:bg-gray-700">Ranking</a>
-                <a href="contact.html" class="text-white block py-2 px-4 hover:bg-gray-700">Contact</a>
+                <a href="/HTML/about.html" class="text-white block py-2 px-4 hover:bg-gray-700">About</a>
+                <a href="/HTML/games.html" class="text-white block py-2 px-4 hover:bg-gray-700">Games</a>
+                <a href="/HTML/ranking.html" class="text-white block py-2 px-4 hover:bg-gray-700">Ranking</a>
+                <a href="/HTML/contact.html" class="text-white block py-2 px-4 hover:bg-gray-700">Contact</a>
             </nav>
 
             <!-- Logo -->
             <div class="flex-grow text-center absolute left-1/2 transform -translate-x-1/2">
-                <img src="/IMG/logoVerticalWhite.png" alt="Dejavu Game Studio Logo" class="mx-auto md:h-40 h-20">
+                <img src="/IMG/logoVerticalWhite.png" href="index.html" alt="Dejavu Game Studio Logo" class="mx-auto md:h-40 h-20">
             </div>
 
             <!-- Social Media Icons -->
@@ -103,7 +103,7 @@
             <!-- Section 4: Challenge -->
             <section class="w-full bg-black py-12 flex flex-col items-center text-center">
                 <h2 class="text-white text-3xl font-bold mb-4">The shadow moves fast… 👁</h2>
-                <a href="challenge.html" 
+                <a href="/HTML/challenge.html" 
                    class="bg-red-600 text-white text-lg font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500 focus:ring-opacity-50 animate-pulse">
                     Accept the challenge now!
                 </a>
@@ -124,15 +124,15 @@
 
                 <!-- Navigation Menu -->
                 <nav id="footer-menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mt-10">
-                    <a href="about.html" class="text-white block py-2 px-4 hover:bg-gray-700">About</a>
-                    <a href="games.html" class="text-white block py-2 px-4 hover:bg-gray-700">Games</a>
-                    <a href="ranking.html" class="text-white block py-2 px-4 hover:bg-gray-700">Ranking</a>
-                    <a href="contact.html" class="text-white block py-2 px-4 hover:bg-gray-700">Contact</a>
+                    <a href="/HTML/about.html" class="text-white block py-2 px-4 hover:bg-gray-700">About</a>
+                    <a href="/HTML/games.html" class="text-white block py-2 px-4 hover:bg-gray-700">Games</a>
+                    <a href="/HTML/ranking.html" class="text-white block py-2 px-4 hover:bg-gray-700">Ranking</a>
+                    <a href="/HTML/contact.html" class="text-white block py-2 px-4 hover:bg-gray-700">Contact</a>
                 </nav>
 
                 <!-- Logo -->
                 <div class="flex-grow text-center absolute left-1/2 transform -translate-x-1/2">
-                    <img src="/IMG/logoVerticalWhite.png" alt="Dejavu Game Studio Logo" class="mx-auto md:h-40 h-20">
+                    <img src="/IMG/logoVerticalWhite.png" href="index.html" alt="Dejavu Game Studio Logo" class="mx-auto md:h-40 h-20">
                 </div>
 
                 <!-- Social Media Icons -->
@@ -153,10 +153,8 @@
         </footer>
     </div>
 
-    <script src="/effects.js"></script>
-    <script src="/scripts/footer.js"></script>
-    <script src="/scripts.js"></script>
-    <script>
+    <script src="/JS/effects.js"></script>
+        <script>
         // Fade-out effect on scroll
         window.addEventListener('scroll', () => {
             const title = document.getElementById('game-title-text');
