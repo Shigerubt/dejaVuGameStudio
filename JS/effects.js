@@ -92,3 +92,34 @@ window.addEventListener('scroll', () => {
         title.classList.remove('fade-out');
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const mainContainer = document.getElementById("main-container");
+    const gameTitleText = document.getElementById("game-title-text");
+
+    // Detecta el scroll y ajusta la opacidad de los elementos
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const fadePoint = window.innerHeight / 2; // Punto donde comienza a desaparecer
+
+        // Efecto para el contenedor principal
+        if (mainContainer) {
+            if (scrollY < fadePoint) {
+                const opacity = 1 - scrollY / fadePoint;
+                mainContainer.style.opacity = opacity > 0 ? opacity : 0;
+            } else {
+                mainContainer.style.opacity = 0;
+            }
+        }
+
+        // Efecto para el título del juego
+        if (gameTitleText) {
+            if (scrollY < fadePoint) {
+                const opacity = 1 - scrollY / fadePoint;
+                gameTitleText.style.opacity = opacity > 0 ? opacity : 0;
+            } else {
+                gameTitleText.style.opacity = 0;
+            }
+        }
+    });
+});

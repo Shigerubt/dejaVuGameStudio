@@ -74,8 +74,36 @@ main {
 
 /* Fade-out effect for game-title-text */
 #game-title-text {
-    transition: opacity 0.5s ease-out;
+    opacity: 1; /* Visible al inicio */
+    transition: opacity 1s ease-in-out; /* Transición suave */
 }
 .fade-out {
-    opacity: 0;
+    animation: fadeOut 1s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#main-container {
+    opacity: 1; /* Visible al inicio */
+    transition: opacity 1s ease-in-out; /* Transición suave */
 }
