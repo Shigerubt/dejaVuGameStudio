@@ -73,9 +73,9 @@ dejaVuGameStudio/
 3. Open `index.html` in your browser to view the website.
 
 For any inquiries or feedback, feel free to reach out:
-- **Website**: [Dejavu Game Studio](https://yourwebsite.com)
+- **Website**: [Dejavu Game Studio](https://dejavugamestudio.xyz)
 - **Email**: contact@dejavugamestudio.com
-- **Social Media**: Follow us on [YouTube](https://www.youtube.com) and [Twitter](https://twitter.com).
+- **Social Media**: Follow us on [YouTube](https://www.youtube.com/@dejavugamestudio) and [Twitter](https://twitter.com).
 
 ---
 
